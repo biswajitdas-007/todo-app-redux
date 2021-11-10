@@ -1,0 +1,52 @@
+.todo {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  padding: 10px;
+  max-height: 40%;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px 15px rgba(0, 0, 0, 0.1);
+}
+.todo button {
+  color: whitesmoke;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.todo > button:nth-of-type(2n) {
+  background-color: red;
+}
+.todo > button:nth-of-type(2n):hover {
+  background-color: red;
+}
+.todo button:hover {
+  transform: scale(1.1);
+  background-color: green;
+}
+.notDone {
+  margin: 0;
+  padding: 0;
+}
+.done {
+  padding: 0;
+  text-decoration: line-through;
+  color: rgb(10, 148, 10);
+}
+
+.back-link > button {
+  padding: 5px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.todo button,
+.notDone,
+.done {
+  margin: 10px;
+}
