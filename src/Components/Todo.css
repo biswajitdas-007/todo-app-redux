@@ -2,7 +2,7 @@
   text-decoration: none;
   color: rgb(0, 0, 0);
   display: flex;
-  padding: 20px;
+  /* padding: 20px; */
   justify-content: center;
 }
 .Link button {
@@ -18,11 +18,11 @@
 .notDone {
   margin: 0;
   padding: 0;
-  width: 100%;
+  min-width: 150px;
 }
 .done {
   color: rgb(10, 148, 10);
-  width: 100%;
+  min-width: 150px;
 }
 .todo-Container {
   margin: 0 auto;
@@ -59,20 +59,21 @@
 .todos {
   padding: 10px;
   max-height: 40%;
-  max-width: 50%;
+  max-width: 80%;
   margin: 0 auto;
   margin-top: 1rem;
   border-radius: 5px;
+  box-shadow: 0 10px 15px 15px rgba(0, 0, 0, 0.1);
 }
 .task-name {
-  word-wrap: break-word;
-  white-space: pre-wrap;
   max-width: 70%;
-  box-shadow: 0 10px 15px 15px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+.task {
+  min-width: 90% !important;
 }
 .Link button,
 .done,
 .notDone {
   padding: 5px;
-  margin: 10px;
 }
