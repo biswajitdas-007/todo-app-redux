@@ -9,32 +9,19 @@ import "./TodoDetails.css"
 function TodoDetails() {
     const param = useParams();
     const dispatch = useDispatch();
-    //console.log("param: ",param)
     let todos = useSelector((store) => store.todos);
-    console.log("todos: ", todos)
     const handleDelete = (id) => {
-        //console.log("id",id)
-        const obj = todos.map((e) => {
-        //console.log("filter:",param.id, e.id)
-             e.id == param.id ? dispatch(updateTodo(e)):console.log(e);
-        })
-        obj.map((e)=> {
-             
+        todos.map((e) => {
+             e.id == param.id && dispatch(updateTodo(e))
         })
        
     }
     const handleToggle = (id) => {
-        //console.log("id",id)
-        const obj = todos.map((e) => {
-        //console.log("filter:",param.id, e.id)
+        todos.map((e) => {
              e.id == param.id ? dispatch(toggleStatus(e)):console.log(e);
-        })
-        obj.map((e)=> {
-             
         })
        
     }
-    //console.log("delete:",handleDelete);
     return (
         <div>
             <Link to="/"  className="back-link"><button>Back</button></Link>

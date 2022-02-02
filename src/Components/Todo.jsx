@@ -22,12 +22,14 @@ export const Todo = () => {
             }} className="todo-button">Add Todo</button>
             {todos.length>=1?todos.map((item) => {
                 return <Link to={`/todo/${item.id}`} key={item.id} className="Link todos">
-                    <div key={item.id}>
-                        <h3 className={`${item.status ? "done" : "notDone"} ${"task"}`}>{item.title}</h3>
-                    </div>
-                    <span>
-                        <Button variant="contained"><EditTwoToneIcon/></Button>
-                    </span>
+                   
+                        <div key={item.id} className="task-name">
+                            <h3 className={`${item.status ? "done" : "notDone"} ${"task"}`}>{item.title}</h3>
+                        </div>
+                        <div>
+                            <Button variant="contained"><EditTwoToneIcon/></Button>
+                        </div>
+                    
                 </Link>
             }):console.log("NO DATA")}
         </div>

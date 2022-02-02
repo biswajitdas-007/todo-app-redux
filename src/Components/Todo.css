@@ -2,8 +2,8 @@
   text-decoration: none;
   color: rgb(0, 0, 0);
   display: flex;
-  justify-content: center;
   padding: 20px;
+  justify-content: center;
 }
 .Link button {
   margin: 0;
@@ -18,9 +18,11 @@
 .notDone {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 .done {
   color: rgb(10, 148, 10);
+  width: 100%;
 }
 .todo-Container {
   margin: 0 auto;
@@ -57,10 +59,15 @@
 .todos {
   padding: 10px;
   max-height: 40%;
-  max-width: 60%;
+  max-width: 50%;
   margin: 0 auto;
   margin-top: 1rem;
   border-radius: 5px;
+}
+.task-name {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 70%;
   box-shadow: 0 10px 15px 15px rgba(0, 0, 0, 0.1);
 }
 .Link button,
@@ -68,7 +75,4 @@
 .notDone {
   padding: 5px;
   margin: 10px;
-}
-.task {
-  margin-top: 20% !important;
 }
